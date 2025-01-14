@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: vexxajobportal
+
+security:
+  headers:
+    cache: false
+
+server:
+  port : 9998
+
+management:
+  endpoints:
+    web:
+      base-path: /api/vexxajobportal/actuator
+      exposure:
+        include: info, health, loggers
+  endpoint:
+    loggers:
+      enabled: true
+
+springdoc:
+  swagger-ui:
+    path: '/api/vexxajobportal/swagger'
+  api-docs:
+    path: '/api/vexxajobportal/api-docs'
+
+#  show-actuator: true
+  
+logging:
+  level:
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    org.springframework.security: INFO
+    # can be put on DEBUG/TRACE for SQL tracing
+    org.hibernate.SQL: ERROR
+    org.hibernate.type.descriptor.sql.BasicBinder: ERROR
+    org.springframework.orm.jpa: ERROR

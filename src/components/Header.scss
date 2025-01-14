@@ -1,0 +1,35 @@
+/* src/components/Header.scss */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #34495e;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__user-info {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__app-name {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem; /* Adjust size as needed for a larger font */
+    font-weight: bold;
+}
+
+.header__user-name {
+    font-weight: bold;
+}
+
+.header__user-role {
+    font-size: 14px;
+    color: #ecf0f1;
+    opacity: 0.8;
+}
